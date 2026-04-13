@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zenovate | Healthcare Data & AI Consulting</title>
+<meta name="description" content="Zenovate LLC helps healthcare organizations adopt AI-powered solutions for claims analytics, workflow automation, and data modernization.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a2e;
+    --ink-light: #3d3d5c;
+    --ink-muted: #6b6b8a;
+    --surface: #faf9f7;
+    --surface-warm: #f3f1ed;
+    --accent: #2563eb;
+    --accent-deep: #1e40af;
+    --accent-glow: #3b82f6;
+    --teal: #0d9488;
+    --teal-light: #ccfbf1;
+    --border: #e5e3df;
+    --white: #ffffff;
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'DM Sans', -apple-system, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--ink);
+    background: var(--surface);
+    line-height: 1.65;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 100;
+    background: rgba(250, 249, 247, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+  }
+  .nav-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: center;
+    height: 64px;
+  }
+  .logo {
+    font-family: var(--font-display);
+    font-weight: 600; font-size: 1.35rem;
+    color: var(--ink);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    text-decoration: none; color: var(--ink-muted);
+    font-size: 0.9rem; font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--ink); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 85vh;
+    display: flex; align-items: center; justify-content: center;
+    padding: 8rem 2rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; top: -30%; right: -15%;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.06) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute; bottom: -20%; left: -10%;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(13, 148, 136, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .hero-content {
+    max-width: 780px; text-align: center;
+    position: relative; z-index: 1;
+  }
+  .hero-tag {
+    display: inline-block;
+    font-size: 0.8rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--accent);
+    background: rgba(37, 99, 235, 0.08);
+    padding: 0.4rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--ink);
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--accent-deep);
+  }
+  .hero p {
+    font-size: 1.15rem;
+    color: var(--ink-muted);
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+  }
+  .hero-cta {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--white);
+    padding: 0.85rem 2.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .hero-cta:hover {
+    background: var(--accent-deep);
+    transform: translateY(-1px);
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 5rem 2rem; }
+  .container { max-width: 1100px; margin: 0 auto; }
+
+  .section-label {
+    font-size: 0.75rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.14em;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    margin-bottom: 1rem;
+  }
+  .section-subtitle {
+    font-size: 1.05rem;
+    color: var(--ink-muted);
+    max-width: 600px;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+  }
+
+  /* ── ABOUT ── */
+  #about { background: var(--white); }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  .about-text p {
+    color: var(--ink-light);
+    margin-bottom: 1.25rem;
+    font-size: 1.02rem;
+  }
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+  .stat-number {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--accent-deep);
+    line-height: 1;
+    margin-bottom: 0.35rem;
+  }
+  .stat-label {
+    font-size: 0.85rem;
+    color: var(--ink-muted);
+    line-height: 1.4;
+  }
+
+  /* ── SOLUTIONS ── */
+  #solutions { background: var(--surface); }
+  .solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .solution-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 2rem 1.75rem;
+    transition: border-color 0.25s, box-shadow 0.25s;
+  }
+  .solution-card:hover {
+    border-color: var(--accent-glow);
+    box-shadow: 0 4px 24px rgba(37, 99, 235, 0.08);
+  }
+  .solution-icon {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.25rem;
+    font-size: 1.3rem;
+  }
+  .solution-icon.blue { background: rgba(37, 99, 235, 0.1); }
+  .solution-icon.teal { background: rgba(13, 148, 136, 0.1); }
+  .solution-icon.purple { background: rgba(124, 58, 237, 0.1); }
+  .solution-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--ink);
+  }
+  .solution-card p {
+    font-size: 0.92rem;
+    color: var(--ink-muted);
+    line-height: 1.65;
+  }
+
+  /* ── EXPERTISE ── */
+  #expertise { background: var(--white); }
+  .expertise-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-top: 2rem;
+  }
+  .pill {
+    display: inline-block;
+    padding: 0.5rem 1.1rem;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid var(--border);
+    color: var(--ink-light);
+    background: var(--surface);
+    transition: all 0.2s;
+  }
+  .pill:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(37, 99, 235, 0.04);
+  }
+  .expertise-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+  .expertise-block h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    color: var(--ink);
+  }
+  .expertise-block p {
+    color: var(--ink-muted);
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  /* ── CONTACT ── */
+  #contact {
+    background: var(--ink);
+    color: var(--white);
+  }
+  #contact .section-label { color: var(--accent-glow); }
+  #contact .section-title { color: var(--white); }
+  #contact .section-subtitle { color: rgba(255,255,255,0.6); }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  .contact-item {
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .contact-item-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 0.5rem;
+  }
+  .contact-item-value {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.9);
+  }
+  .contact-item-value a {
+    color: var(--accent-glow);
+    text-decoration: none;
+  }
+  .contact-item-value a:hover { text-decoration: underline; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.35);
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero { min-height: 70vh; padding: 7rem 1.5rem 3rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .solutions-grid { grid-template-columns: 1fr; }
+    .expertise-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; gap: 0; }
+    section { padding: 3.5rem 1.5rem; }
+  }
+
+  /* ── FADE-IN ── */
+  .fade-in {
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">Zeno<span>vate</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#solutions">Solutions</a></li>
+      <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-tag">Healthcare Data & AI Consulting</div>
+    <h1>Where healthcare domain expertise meets <em>AI-powered</em> solutions</h1>
+    <p>We help payer organizations, health IT vendors, and healthcare operations teams architect and deploy intelligent systems that actually work — built on deep claims data knowledge, not just algorithms.</p>
+    <a href="#contact" class="hero-cta">Start a Conversation</a>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text fade-in">
+        <div class="section-label">About Us</div>
+        <h2 class="section-title">Built on a decade of healthcare data engineering</h2>
+        <p>Zenovate LLC is a healthcare data and AI consulting firm based in the Washington, D.C. metro area. We specialize in helping healthcare organizations move from AI experimentation to production-grade deployment.</p>
+        <p>Our founder brings 10+ years of hands-on experience in enterprise healthcare data engineering — working with claims datasets at billion-row scale, building production pipelines, and architecting analytics platforms for one of the nation's largest health plans.</p>
+        <p>We combine rare cross-disciplinary depth — spanning data engineering, financial analysis, and applied AI — with the practical knowledge of how healthcare data actually works: the messy business logic, the edge cases in claims adjudication, the compliance requirements that generic AI consultants overlook.</p>
+      </div>
+      <div class="about-stats fade-in">
+        <div class="stat-card">
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Years in healthcare data engineering</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">4B+</div>
+          <div class="stat-label">Claims rows processed & modeled</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">3</div>
+          <div class="stat-label">Master's degrees across data, finance & linguistics</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">AI-First</div>
+          <div class="stat-label">Claude & LLM-native consulting practice</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SOLUTIONS ── -->
+<section id="solutions">
+  <div class="container">
+    <div class="section-label fade-in">Solutions</div>
+    <h2 class="section-title fade-in">What we build</h2>
+    <div class="section-subtitle fade-in">End-to-end AI solutions designed for the unique complexities of healthcare data.</div>
+    <div class="solutions-grid">
+      <div class="solution-card fade-in">
+        <div class="solution-icon blue">🤖</div>
+        <h3>AI Agents for Healthcare Operations</h3>
+        <p>Conversational AI agents that handle member inquiries, benefits verification, claims status lookups, and prior authorization workflows — replacing rigid IVR systems with intelligent, context-aware interactions.</p>
+      </div>
+      <div class="solution-card fade-in">
+        <div class="solution-icon teal">📋</div>
+        <h3>Intelligent Claims Processing</h3>
+        <p>AI-assisted claim filing tools that guide providers through complex submissions, auto-validate against payer rules, flag potential denials before submission, and reduce rework cycles.</p>
+      </div>
+      <div class="solution-card fade-in">
+        <div class="solution-icon purple">🔄</div>
+        <h3>Data Platform Modernization</h3>
+        <p>End-to-end migration of legacy healthcare data systems — SQL Server, SAS, on-prem warehouses — to modern cloud-native platforms like Databricks, with AI-assisted code translation and pipeline development.</p>
+      </div>
+      <div class="solution-card fade-in">
+        <div class="solution-icon blue">📊</div>
+        <h3>Claims Analytics & Data Quality</h3>
+        <p>Automated data quality monitoring, anomaly detection, and claims analytics dashboards built on top of your existing data infrastructure — turning billions of rows into actionable intelligence.</p>
+      </div>
+      <div class="solution-card fade-in">
+        <div class="solution-icon teal">📄</div>
+        <h3>EOB & Document Intelligence</h3>
+        <p>AI-powered tools that interpret Explanation of Benefits documents, medical coding outputs, and regulatory filings — making complex healthcare paperwork understandable for both operations teams and members.</p>
+      </div>
+      <div class="solution-card fade-in">
+        <div class="solution-icon purple">⚙️</div>
+        <h3>Workflow Automation</h3>
+        <p>Custom AI workflows for healthcare operations — from automated provider credential verification to intelligent routing of appeals and grievances — reducing manual intervention while maintaining compliance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EXPERTISE ── -->
+<section id="expertise">
+  <div class="container">
+    <div class="section-label fade-in">Technical Expertise</div>
+    <h2 class="section-title fade-in">Our technology stack</h2>
+    <div class="section-subtitle fade-in">Deep hands-on experience across the modern healthcare data and AI ecosystem.</div>
+    <div class="expertise-pills fade-in">
+      <span class="pill">Databricks / Delta Lake</span>
+      <span class="pill">AWS SageMaker</span>
+      <span class="pill">AWS Bedrock</span>
+      <span class="pill">Claude API / MCP</span>
+      <span class="pill">Python</span>
+      <span class="pill">SQL / Spark SQL</span>
+      <span class="pill">Alteryx</span>
+      <span class="pill">SAS</span>
+      <span class="pill">RAG / Knowledge Bases</span>
+      <span class="pill">Agentic AI</span>
+      <span class="pill">LLM Fine-tuning</span>
+      <span class="pill">HIPAA Compliance</span>
+      <span class="pill">Claims Data Modeling</span>
+      <span class="pill">Unity Catalog</span>
+      <span class="pill">ETL / Data Pipelines</span>
+    </div>
+    <div class="expertise-grid">
+      <div class="expertise-block fade-in">
+        <h3>Healthcare Domain</h3>
+        <p>Deep expertise in medical claims adjudication, member coverage hierarchies, provider network management, pharmacy benefits, and payer operations. We understand the business logic behind the data — not just the tables and columns.</p>
+      </div>
+      <div class="expertise-block fade-in">
+        <h3>AI & Machine Learning</h3>
+        <p>Production-grade AI implementations including conversational agents, RAG pipelines, document intelligence, and agentic workflows. Claude-native development with API integration, MCP connectors, and enterprise deployment patterns.</p>
+      </div>
+      <div class="expertise-block fade-in">
+        <h3>Data Engineering at Scale</h3>
+        <p>Billion-row dataset optimization, CTE-based query architecture, provider deduplication strategies, incremental data loading patterns, and cross-platform migration (SQL Server → Databricks, SAS → Python).</p>
+      </div>
+      <div class="expertise-block fade-in">
+        <h3>Cloud & Infrastructure</h3>
+        <p>We work within our clients' existing cloud environments — AWS, Google Cloud, or Azure — architecting solutions that integrate with their infrastructure, security posture, and compliance requirements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="container">
+    <div class="section-label fade-in">Get in Touch</div>
+    <h2 class="section-title fade-in">Let's talk about what you're building</h2>
+    <div class="section-subtitle fade-in">Whether you're modernizing a legacy data platform, exploring AI agents for member services, or need hands-on healthcare data expertise — we'd like to hear from you.</div>
+    <div class="contact-grid fade-in">
+      <div>
+        <div class="contact-item">
+          <div class="contact-item-label">Email</div>
+          <div class="contact-item-value"><a href="mailto:hello@zenovate.us.com">hello@zenovate.us.com</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-label">Location</div>
+          <div class="contact-item-value">Washington, D.C. Metro Area</div>
+        </div>
+      </div>
+      <div>
+        <div class="contact-item">
+          <div class="contact-item-label">Company</div>
+          <div class="contact-item-value">Zenovate LLC</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-label">Focus</div>
+          <div class="contact-item-value">Healthcare Data & AI Consulting</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    &copy; 2026 Zenovate LLC. All rights reserved.
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
