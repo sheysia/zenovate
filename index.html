@@ -3,8 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zenovate | Healthcare Data & AI Consulting</title>
-<meta name="description" content="Zenovate LLC helps healthcare organizations adopt AI-powered solutions for claims analytics, workflow automation, and data modernization.">
+<title>Zenovate | Data, AI &amp; Advisory</title>
+<meta name="description" content="Zenovate is a senior cross-disciplinary team helping organizations across healthcare, small business, and applied research design and deploy AI-empowered systems built on deep domain and data knowledge.">
+
+<meta property="og:title" content="Zenovate | Data, AI &amp; Advisory">
+<meta property="og:description" content="AI-enabled systems for complex data, healthcare workflows, small business operations, and applied research.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zenovate.us.com/">
+<meta property="og:image" content="https://zenovate.us.com/assets/preview-cover.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Zenovate | Data, AI &amp; Advisory">
+<meta name="twitter:description" content="AI-enabled systems for complex data, healthcare workflows, small business operations, and applied research.">
+<meta name="twitter:image" content="https://zenovate.us.com/assets/preview-cover.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&display=swap" rel="stylesheet">
 <style>
@@ -26,9 +38,7 @@
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
-
   body {
     font-family: var(--font-body);
     color: var(--ink);
@@ -38,7 +48,6 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ── NAV ── */
   nav {
     position: fixed; top: 0; width: 100%; z-index: 100;
     background: rgba(250, 249, 247, 0.92);
@@ -54,8 +63,7 @@
   .logo {
     font-family: var(--font-display);
     font-weight: 600; font-size: 1.35rem;
-    color: var(--ink);
-    text-decoration: none;
+    color: var(--ink); text-decoration: none;
     letter-spacing: -0.02em;
   }
   .logo span { color: var(--accent); }
@@ -67,29 +75,25 @@
   }
   .nav-links a:hover { color: var(--ink); }
 
-  /* ── HERO ── */
   .hero {
-    min-height: 85vh;
+    min-height: 82vh;
     display: flex; align-items: center; justify-content: center;
     padding: 8rem 2rem 4rem;
-    position: relative;
-    overflow: hidden;
+    position: relative; overflow: hidden;
   }
   .hero::before {
     content: '';
     position: absolute; top: -30%; right: -15%;
     width: 700px; height: 700px;
-    background: radial-gradient(circle, rgba(37, 99, 235, 0.06) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.04) 0%, transparent 70%);
+    border-radius: 50%; pointer-events: none;
   }
   .hero::after {
     content: '';
     position: absolute; bottom: -20%; left: -10%;
     width: 500px; height: 500px;
-    background: radial-gradient(circle, rgba(13, 148, 136, 0.05) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
+    background: radial-gradient(circle, rgba(13, 148, 136, 0.03) 0%, transparent 70%);
+    border-radius: 50%; pointer-events: none;
   }
   .hero-content {
     max-width: 780px; text-align: center;
@@ -97,10 +101,10 @@
   }
   .hero-tag {
     display: inline-block;
-    font-size: 0.8rem; font-weight: 600;
-    text-transform: uppercase; letter-spacing: 0.12em;
+    font-size: 0.78rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.14em;
     color: var(--accent);
-    background: rgba(37, 99, 235, 0.08);
+    background: rgba(37, 99, 235, 0.07);
     padding: 0.4rem 1rem;
     border-radius: 100px;
     margin-bottom: 1.5rem;
@@ -115,20 +119,18 @@
     margin-bottom: 1.5rem;
   }
   .hero h1 em {
-    font-style: italic;
-    color: var(--accent-deep);
+    font-style: italic; color: var(--accent-deep);
   }
   .hero p {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     color: var(--ink-muted);
-    max-width: 600px;
+    max-width: 620px;
     margin: 0 auto 2.5rem;
     line-height: 1.7;
   }
   .hero-cta {
     display: inline-block;
-    background: var(--ink);
-    color: var(--white);
+    background: var(--ink); color: var(--white);
     padding: 0.85rem 2.2rem;
     border-radius: 8px;
     text-decoration: none;
@@ -141,7 +143,6 @@
     transform: translateY(-1px);
   }
 
-  /* ── SECTIONS ── */
   section { padding: 5rem 2rem; }
   .container { max-width: 1100px; margin: 0 auto; }
 
@@ -163,12 +164,12 @@
   .section-subtitle {
     font-size: 1.05rem;
     color: var(--ink-muted);
-    max-width: 600px;
+    max-width: 620px;
     line-height: 1.7;
     margin-bottom: 3rem;
   }
 
-  /* ── ABOUT ── */
+  /* ABOUT */
   #about { background: var(--white); }
   .about-grid {
     display: grid;
@@ -194,66 +195,129 @@
   }
   .stat-number {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 600;
     color: var(--accent-deep);
-    line-height: 1;
-    margin-bottom: 0.35rem;
+    line-height: 1.05;
+    margin-bottom: 0.45rem;
+  }
+  .stat-number.text {
+    font-size: 1.3rem;
   }
   .stat-label {
     font-size: 0.85rem;
     color: var(--ink-muted);
-    line-height: 1.4;
+    line-height: 1.45;
   }
 
-  /* ── SOLUTIONS ── */
-  #solutions { background: var(--surface); }
-  .solutions-grid {
+  /* PRACTICES */
+  #practices { background: var(--surface); }
+  .practices-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
   }
-  .solution-card {
+  .practice-card {
     background: var(--white);
     border: 1px solid var(--border);
     border-radius: 14px;
     padding: 2rem 1.75rem;
     transition: border-color 0.25s, box-shadow 0.25s;
+    display: flex; flex-direction: column;
   }
-  .solution-card:hover {
+  .practice-card:hover {
     border-color: var(--accent-glow);
     box-shadow: 0 4px 24px rgba(37, 99, 235, 0.08);
   }
-  .solution-icon {
-    width: 44px; height: 44px;
-    border-radius: 10px;
-    display: flex; align-items: center; justify-content: center;
-    margin-bottom: 1.25rem;
-    font-size: 1.3rem;
-  }
-  .solution-icon.blue { background: rgba(37, 99, 235, 0.1); }
-  .solution-icon.teal { background: rgba(13, 148, 136, 0.1); }
-  .solution-icon.purple { background: rgba(124, 58, 237, 0.1); }
-  .solution-card h3 {
+  .practice-num {
     font-family: var(--font-display);
-    font-size: 1.15rem;
+    font-size: 0.85rem;
     font-weight: 600;
-    margin-bottom: 0.75rem;
-    color: var(--ink);
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    display: block;
   }
-  .solution-card p {
-    font-size: 0.92rem;
+  .practice-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.18rem;
+    font-weight: 600;
+    margin-bottom: 0.85rem;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+  .practice-card p {
+    font-size: 0.94rem;
     color: var(--ink-muted);
     line-height: 1.65;
   }
+  .practice-note {
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+    font-style: italic;
+    opacity: 0.7;
+    margin-top: 1rem;
+  }
 
-  /* ── EXPERTISE ── */
-  #expertise { background: var(--white); }
+  /* WORK */
+  #work { background: var(--white); }
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  .work-card {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.75rem;
+    background: var(--surface);
+    transition: border-color 0.25s, box-shadow 0.25s;
+  }
+  .work-card:hover {
+    border-color: var(--accent-glow);
+    box-shadow: 0 4px 24px rgba(37, 99, 235, 0.06);
+  }
+  .work-tag {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+  }
+  .work-name {
+    font-family: var(--font-display);
+    font-size: 1.18rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.55rem;
+  }
+  .work-desc {
+    font-size: 0.93rem;
+    color: var(--ink-muted);
+    line-height: 1.6;
+  }
+
+  /* EXPERTISE */
+  #expertise { background: var(--surface); }
+  .expertise-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 0.5rem;
+  }
+  .expertise-group .group-label {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.85rem;
+    letter-spacing: -0.01em;
+  }
   .expertise-pills {
     display: flex;
     flex-wrap: wrap;
     gap: 0.65rem;
-    margin-top: 2rem;
   }
   .pill {
     display: inline-block;
@@ -263,7 +327,7 @@
     font-weight: 500;
     border: 1px solid var(--border);
     color: var(--ink-light);
-    background: var(--surface);
+    background: var(--white);
     transition: all 0.2s;
   }
   .pill:hover {
@@ -271,26 +335,8 @@
     color: var(--accent);
     background: rgba(37, 99, 235, 0.04);
   }
-  .expertise-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    margin-top: 3rem;
-  }
-  .expertise-block h3 {
-    font-family: var(--font-display);
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin-bottom: 0.75rem;
-    color: var(--ink);
-  }
-  .expertise-block p {
-    color: var(--ink-muted);
-    font-size: 0.95rem;
-    line-height: 1.65;
-  }
 
-  /* ── CONTACT ── */
+  /* CONTACT */
   #contact {
     background: var(--ink);
     color: var(--white);
@@ -298,6 +344,32 @@
   #contact .section-label { color: var(--accent-glow); }
   #contact .section-title { color: var(--white); }
   #contact .section-subtitle { color: rgba(255,255,255,0.6); }
+  .contact-prompts {
+    margin-bottom: 3rem;
+  }
+  .contact-prompts-label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 0.85rem;
+    font-weight: 600;
+  }
+  .contact-prompts-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .contact-prompts-list li {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.85);
+    padding: 1rem 1.1rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    background: rgba(255,255,255,0.03);
+    line-height: 1.5;
+  }
   .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -324,7 +396,6 @@
   }
   .contact-item-value a:hover { text-decoration: underline; }
 
-  /* ── FOOTER ── */
   footer {
     background: var(--ink);
     border-top: 1px solid rgba(255,255,255,0.08);
@@ -334,23 +405,33 @@
     color: rgba(255,255,255,0.35);
   }
 
-  /* ── MOBILE ── */
   @media (max-width: 768px) {
     .nav-links { display: none; }
-    .hero { min-height: 70vh; padding: 7rem 1.5rem 3rem; }
+    .hero { min-height: 64vh; padding: 7rem 1.5rem 3rem; }
     .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .solutions-grid { grid-template-columns: 1fr; }
-    .expertise-grid { grid-template-columns: 1fr; }
+    .practices-grid { grid-template-columns: 1fr; }
+    .work-grid { grid-template-columns: 1fr; }
     .contact-grid { grid-template-columns: 1fr; gap: 0; }
+    .contact-prompts-list { grid-template-columns: 1fr; }
     section { padding: 3.5rem 1.5rem; }
   }
 
-  /* ── FADE-IN ── */
   .fade-in {
     opacity: 0; transform: translateY(20px);
     transition: opacity 0.6s ease, transform 0.6s ease;
   }
   .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .fade-in {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+    .hero-cta { transition: none; }
+    .practice-card, .work-card, .pill { transition: none; }
+  }
 </style>
 </head>
 <body>
@@ -360,152 +441,179 @@
     <a href="#" class="logo">Zeno<span>vate</span></a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#solutions">Solutions</a></li>
+      <li><a href="#practices">Practices</a></li>
+      <li><a href="#work">Work</a></li>
       <li><a href="#expertise">Expertise</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
 </nav>
 
-<!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-tag">Healthcare Data & AI Consulting</div>
-    <h1>Where healthcare domain expertise meets <em>AI-powered</em> solutions</h1>
-    <p>We help payer organizations, health IT vendors, and healthcare operations teams architect and deploy intelligent systems that actually work — built on deep claims data knowledge, not just algorithms.</p>
-    <a href="#contact" class="hero-cta">Start a Conversation</a>
+    <div class="hero-tag">Data, AI &amp; Advisory</div>
+    <h1><em>AI systems</em> for complex data, regulated workflows, and real business operations.</h1>
+    <p>Zenovate helps healthcare, research, and small-business teams turn messy data and domain-heavy workflows into practical AI-enabled systems, from data architecture to internal tools, automation, and advisory.</p>
+    <a href="#contact" class="hero-cta" aria-label="Contact Zenovate to start a conversation">Start a Conversation</a>
   </div>
 </section>
 
-<!-- ── ABOUT ── -->
 <section id="about">
   <div class="container">
     <div class="about-grid">
       <div class="about-text fade-in">
-        <div class="section-label">About Us</div>
-        <h2 class="section-title">Built on a decade of healthcare data engineering</h2>
-        <p>Zenovate LLC is a healthcare data and AI consulting firm based in the Washington, D.C. metro area. We specialize in helping healthcare organizations move from AI experimentation to production-grade deployment.</p>
-        <p>Our founder brings 10+ years of hands-on experience in enterprise healthcare data engineering — working with claims datasets at billion-row scale, building production pipelines, and architecting analytics platforms for one of the nation's largest health plans.</p>
-        <p>We combine rare cross-disciplinary depth — spanning data engineering, financial analysis, and applied AI — with the practical knowledge of how healthcare data actually works: the messy business logic, the edge cases in claims adjudication, the compliance requirements that generic AI consultants overlook.</p>
+        <div class="section-label">About</div>
+        <h2 class="section-title">A hands-on, fast-moving senior team across data, research, and advisory</h2>
+        <p>Zenovate is a senior cross-disciplinary team with 12+ years average industry tenure. Our bench includes engineers, data scientists, research postdocs, and legal &amp; economics advisors working as one extended team across our three practice areas.</p>
+        <p>We bring the kind of cross-discipline depth that's rare under one roof: production-grade engineering, applied research literacy, and the regulatory and economic context that shapes how systems actually get used.</p>
+        <p>Engagements have spanned enterprise healthcare data, applied AI for small businesses, and research-backed advisory for emerging companies and policy work.</p>
+        <p>Built small and senior by design: fewer handoffs, faster cycles, and decisions made by the people doing the work.</p>
       </div>
       <div class="about-stats fade-in">
         <div class="stat-card">
+          <div class="stat-number">12+ yrs</div>
+          <div class="stat-label">Average industry tenure across the team</div>
+        </div>
+        <div class="stat-card">
           <div class="stat-number">10+</div>
-          <div class="stat-label">Years in healthcare data engineering</div>
+          <div class="stat-label">Cross-functional bench across data engineering, AI, applied research, economics, legal, biotech, and media.</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number">4B+</div>
-          <div class="stat-label">Claims rows processed & modeled</div>
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Active client and project engagements</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number">3</div>
-          <div class="stat-label">Master's degrees across data, finance & linguistics</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">AI-First</div>
-          <div class="stat-label">Claude & LLM-native consulting practice</div>
+          <div class="stat-number text">AI-Empowered</div>
+          <div class="stat-label">with responsibility built into every engagement</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── SOLUTIONS ── -->
-<section id="solutions">
+<section id="practices">
   <div class="container">
-    <div class="section-label fade-in">Solutions</div>
-    <h2 class="section-title fade-in">What we build</h2>
-    <div class="section-subtitle fade-in">End-to-end AI solutions designed for the unique complexities of healthcare data.</div>
-    <div class="solutions-grid">
-      <div class="solution-card fade-in">
-        <div class="solution-icon blue">🤖</div>
-        <h3>AI Agents for Healthcare Operations</h3>
-        <p>Conversational AI agents that handle member inquiries, benefits verification, claims status lookups, and prior authorization workflows — replacing rigid IVR systems with intelligent, context-aware interactions.</p>
+    <div class="section-label fade-in">Practices</div>
+    <h2 class="section-title fade-in">Three directions, one bench</h2>
+    <div class="section-subtitle fade-in">We work across three practice areas, with the same team rotating in based on the problem rather than handing off across silos.</div>
+    <div class="practices-grid">
+      <div class="practice-card fade-in">
+        <span class="practice-num">01</span>
+        <h3>Healthcare Data &amp; AI</h3>
+        <p>Claims analytics, payer operations, EOB and document intelligence, and migrations from legacy data platforms (SQL Server, SAS, on-prem warehouses) to modern cloud-native stacks. We've worked with the messy adjudication logic, edge cases, and compliance requirements that generic AI consultancies tend to miss.</p>
+        <p class="practice-note">Engagements have included claims datasets at billion-row scale.</p>
       </div>
-      <div class="solution-card fade-in">
-        <div class="solution-icon teal">📋</div>
-        <h3>Intelligent Claims Processing</h3>
-        <p>AI-assisted claim filing tools that guide providers through complex submissions, auto-validate against payer rules, flag potential denials before submission, and reduce rework cycles.</p>
+      <div class="practice-card fade-in">
+        <span class="practice-num">02</span>
+        <h3>AI Architecture for Small &amp; Mid-Market Business</h3>
+        <p>Practical AI systems for businesses without enterprise data teams: agents, internal automations, document intelligence, knowledge bases, and lightweight data pipelines. We design for the constraint that one or two people will need to maintain it long after we've handed off.</p>
       </div>
-      <div class="solution-card fade-in">
-        <div class="solution-icon purple">🔄</div>
-        <h3>Data Platform Modernization</h3>
-        <p>End-to-end migration of legacy healthcare data systems — SQL Server, SAS, on-prem warehouses — to modern cloud-native platforms like Databricks, with AI-assisted code translation and pipeline development.</p>
-      </div>
-      <div class="solution-card fade-in">
-        <div class="solution-icon blue">📊</div>
-        <h3>Claims Analytics & Data Quality</h3>
-        <p>Automated data quality monitoring, anomaly detection, and claims analytics dashboards built on top of your existing data infrastructure — turning billions of rows into actionable intelligence.</p>
-      </div>
-      <div class="solution-card fade-in">
-        <div class="solution-icon teal">📄</div>
-        <h3>EOB & Document Intelligence</h3>
-        <p>AI-powered tools that interpret Explanation of Benefits documents, medical coding outputs, and regulatory filings — making complex healthcare paperwork understandable for both operations teams and members.</p>
-      </div>
-      <div class="solution-card fade-in">
-        <div class="solution-icon purple">⚙️</div>
-        <h3>Workflow Automation</h3>
-        <p>Custom AI workflows for healthcare operations — from automated provider credential verification to intelligent routing of appeals and grievances — reducing manual intervention while maintaining compliance.</p>
+      <div class="practice-card fade-in">
+        <span class="practice-num">03</span>
+        <h3>Applied Research &amp; Advisory</h3>
+        <p>Research-grade analysis for product, policy, and regulatory questions. Deliverables include market and policy research, economic modeling, structured white papers, product due diligence, regulatory landscape reviews, and AI-assisted research workflows.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── EXPERTISE ── -->
+<section id="work">
+  <div class="container">
+    <div class="section-label fade-in">Selected Work &amp; Ecosystem</div>
+    <h2 class="section-title fade-in">Projects, partners, and initiatives</h2>
+    <div class="section-subtitle fade-in">A snapshot of the applied work, collaborations, internal labs, and advisory initiatives that shape the Zenovate ecosystem.</div>
+    <div class="work-grid">
+      <div class="work-card fade-in">
+        <div class="work-tag">Bio &amp; Lab Science</div>
+        <div class="work-name">SignaGen</div>
+        <div class="work-desc">Applied AI and data infrastructure work for bio, lab-science, and research-oriented workflows.</div>
+      </div>
+      <div class="work-card fade-in">
+        <div class="work-tag">Community · AI Workgroup</div>
+        <div class="work-name">DMVoice</div>
+        <div class="work-desc">Community platform and AI workgroup initiative focused on practical AI learning, collaboration, and tooling.</div>
+      </div>
+      <div class="work-card fade-in">
+        <div class="work-tag">Applied Research · Tooling</div>
+        <div class="work-name">Syneira Lab</div>
+        <div class="work-desc">Applied research, prototyping, and tooling for AI workflows, editorial systems, and practical product concepts.</div>
+      </div>
+      <div class="work-card fade-in">
+        <div class="work-tag">Legal &amp; Economics</div>
+        <div class="work-name">Evolith Advisory</div>
+        <div class="work-desc">Legal, economic, and policy-adjacent research advisory work for emerging company needs.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="expertise">
   <div class="container">
     <div class="section-label fade-in">Technical Expertise</div>
-    <h2 class="section-title fade-in">Our technology stack</h2>
-    <div class="section-subtitle fade-in">Deep hands-on experience across the modern healthcare data and AI ecosystem.</div>
-    <div class="expertise-pills fade-in">
-      <span class="pill">Databricks / Delta Lake</span>
-      <span class="pill">AWS SageMaker</span>
-      <span class="pill">AWS Bedrock</span>
-      <span class="pill">Claude API / MCP</span>
-      <span class="pill">Python</span>
-      <span class="pill">SQL / Spark SQL</span>
-      <span class="pill">Alteryx</span>
-      <span class="pill">SAS</span>
-      <span class="pill">RAG / Knowledge Bases</span>
-      <span class="pill">Agentic AI</span>
-      <span class="pill">LLM Fine-tuning</span>
-      <span class="pill">HIPAA Compliance</span>
-      <span class="pill">Claims Data Modeling</span>
-      <span class="pill">Unity Catalog</span>
-      <span class="pill">ETL / Data Pipelines</span>
-    </div>
-    <div class="expertise-grid">
-      <div class="expertise-block fade-in">
-        <h3>Healthcare Domain</h3>
-        <p>Deep expertise in medical claims adjudication, member coverage hierarchies, provider network management, pharmacy benefits, and payer operations. We understand the business logic behind the data — not just the tables and columns.</p>
+    <h2 class="section-title fade-in">Stack and domain coverage</h2>
+    <div class="section-subtitle fade-in">Hands-on coverage across the modern data and AI ecosystem, with deep domain context in the verticals we work in.</div>
+    <div class="expertise-groups">
+      <div class="expertise-group fade-in">
+        <h4 class="group-label">Data Platforms</h4>
+        <div class="expertise-pills">
+          <span class="pill">Databricks</span>
+          <span class="pill">Delta Lake</span>
+          <span class="pill">Unity Catalog</span>
+          <span class="pill">SQL Server</span>
+          <span class="pill">Cloud Warehouses</span>
+        </div>
       </div>
-      <div class="expertise-block fade-in">
-        <h3>AI & Machine Learning</h3>
-        <p>Production-grade AI implementations including conversational agents, RAG pipelines, document intelligence, and agentic workflows. Claude-native development with API integration, MCP connectors, and enterprise deployment patterns.</p>
+      <div class="expertise-group fade-in">
+        <h4 class="group-label">AI Systems</h4>
+        <div class="expertise-pills">
+          <span class="pill">RAG / Knowledge Bases</span>
+          <span class="pill">Claude API / MCP</span>
+          <span class="pill">AWS Bedrock</span>
+          <span class="pill">AWS SageMaker</span>
+          <span class="pill">LLM Fine-tuning</span>
+        </div>
       </div>
-      <div class="expertise-block fade-in">
-        <h3>Data Engineering at Scale</h3>
-        <p>Billion-row dataset optimization, CTE-based query architecture, provider deduplication strategies, incremental data loading patterns, and cross-platform migration (SQL Server → Databricks, SAS → Python).</p>
+      <div class="expertise-group fade-in">
+        <h4 class="group-label">Healthcare Data</h4>
+        <div class="expertise-pills">
+          <span class="pill">Claims Data Modeling</span>
+          <span class="pill">EOB / Document Intelligence</span>
+          <span class="pill">Payer Operations</span>
+          <span class="pill">HIPAA-aware Workflows</span>
+        </div>
       </div>
-      <div class="expertise-block fade-in">
-        <h3>Cloud & Infrastructure</h3>
-        <p>We work within our clients' existing cloud environments — AWS, Google Cloud, or Azure — architecting solutions that integrate with their infrastructure, security posture, and compliance requirements.</p>
+      <div class="expertise-group fade-in">
+        <h4 class="group-label">Analytics &amp; Automation</h4>
+        <div class="expertise-pills">
+          <span class="pill">Python</span>
+          <span class="pill">SQL / Spark SQL</span>
+          <span class="pill">SAS</span>
+          <span class="pill">Alteryx</span>
+          <span class="pill">ETL Pipelines</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── CONTACT ── -->
 <section id="contact">
   <div class="container">
     <div class="section-label fade-in">Get in Touch</div>
     <h2 class="section-title fade-in">Let's talk about what you're building</h2>
-    <div class="section-subtitle fade-in">Whether you're modernizing a legacy data platform, exploring AI agents for member services, or need hands-on healthcare data expertise — we'd like to hear from you.</div>
+    <div class="section-subtitle fade-in">Send us a short note about your workflow, data environment, and what you are trying to improve.</div>
+    <div class="contact-prompts fade-in">
+      <div class="contact-prompts-label">Typical starting points</div>
+      <ul class="contact-prompts-list">
+        <li>Audit an existing data or AI workflow</li>
+        <li>Design a practical AI tool or internal automation</li>
+        <li>Modernize legacy analytics pipelines</li>
+      </ul>
+    </div>
     <div class="contact-grid fade-in">
       <div>
         <div class="contact-item">
           <div class="contact-item-label">Email</div>
-          <div class="contact-item-value"><a href="mailto:hello@zenovate.us.com">hello@zenovate.us.com</a></div>
+          <div class="contact-item-value"><a href="mailto:info@zenovate.us.com">info@zenovate.us.com</a></div>
         </div>
         <div class="contact-item">
           <div class="contact-item-label">Location</div>
@@ -518,8 +626,8 @@
           <div class="contact-item-value">Zenovate LLC</div>
         </div>
         <div class="contact-item">
-          <div class="contact-item-label">Focus</div>
-          <div class="contact-item-value">Healthcare Data & AI Consulting</div>
+          <div class="contact-item-label">Practice Areas</div>
+          <div class="contact-item-value">Healthcare · Small Business AI · Applied Research</div>
         </div>
       </div>
     </div>
@@ -528,7 +636,7 @@
 
 <footer>
   <div class="container">
-    &copy; 2026 Zenovate LLC. All rights reserved.
+    &copy; 2024 Zenovate LLC. All rights reserved.
   </div>
 </footer>
 
