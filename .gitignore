@@ -2,6 +2,8 @@ index - Copy.html
 _*.html
 *.bak
 *.tmp
+assets/ChatGPT*
+assets/preview cover updated.png
 *~
 .DS_Store
 Thumbs.db
